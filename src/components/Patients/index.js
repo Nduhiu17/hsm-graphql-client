@@ -1,6 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import {Button, Grid, Typography} from "@material-ui/core";
+import {Button, Grid, Toolbar, Typography} from "@material-ui/core";
 import AddIcon from '@material-ui/icons/Add';
 
 
@@ -23,8 +23,10 @@ export default withStyles(styles)(
   >
     <Button
       variant="contained"
+      color="info"
       className={classes.button}
       disableElevation
+      component="div"
     >
       Registered Patients
     </Button>
@@ -37,6 +39,7 @@ export default withStyles(styles)(
       Add Patient
     </Button>
   </Grid>
+  {/*<Toolbar></Toolbar>*/}
  <AppTable/>
 </Layout>
 )

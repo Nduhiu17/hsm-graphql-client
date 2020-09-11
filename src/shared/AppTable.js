@@ -55,14 +55,15 @@ const rows = [
 
 ];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
   },
   container: {
     maxHeight: 440,
   },
-});
+  toolbar: theme.mixins.toolbar,
+}))
 
 export default function AppTable() {
   const classes = useStyles();
@@ -81,7 +82,7 @@ export default function AppTable() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table" >
+        <Table stickyHeader aria-label="sticky table" size="small">
           <TableHead>
             <TableRow>
               {columns.map((column) => (
