@@ -7,6 +7,7 @@ import history from "./utils/history";
 const Patients = React.lazy(() => import('./components/Patients'))
 const Nursing = React.lazy(() => import('./components/Nursing'))
 const Consultation = React.lazy(() => import('./components/Consultation'))
+const Pharmacy = React.lazy(() => import('./components/Pharmacy'))
 const PatientForm = React.lazy(() => import('./components/Patients/Form'))
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/" component={Patients} />
             <Route exact path="/nursing" component={Nursing} />
             <Route exact path="/consultation" component={Consultation} />
+            <Route exact path="/pharmacy" component={Pharmacy} />
             <Route exact path="/create-patient" component={PatientForm} />
             <Route component={Patients} />
           </Switch>

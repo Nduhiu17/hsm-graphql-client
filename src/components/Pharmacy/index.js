@@ -11,11 +11,11 @@ const styles = theme => ({
 })
 
 export default withStyles(styles)(
- () =>{
-   return (
-     <Layout>
-       <AppTable columns={patientColumns} data={patientData}/>
-     </Layout>
-   )
- }
+  () =>{
+    return (
+      <Layout>
+        <AppTable columns={patientColumns} data={patientData}/>
+      </Layout>
+    )
+  }
 )

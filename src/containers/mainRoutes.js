@@ -1,7 +1,7 @@
-import PersonIcon from '@material-ui/icons/Person';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import HealingIcon from '@material-ui/icons/Healing';
 import TripOriginIcon from '@material-ui/icons/TripOrigin';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import React from "react";
 
 const mainRoutes = [{
@@ -25,6 +25,13 @@ const mainRoutes = [{
     fontSize = "default" / > ,
     routes: [],
   },
+{
+path: '/pharmacy',
+name: 'Pharmacy',
+icon: < LocalHospitalIcon color = "primary"
+                    fontSize = "default" / > ,
+routes: [],
+},
 ]
 
 export default mainRoutes
