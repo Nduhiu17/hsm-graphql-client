@@ -1,11 +1,13 @@
 const patientColumns = [
   { title: 'Name', field: 'name' },
-  { title: 'Surname', field: 'surname' },
-  { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+  { title: 'Mobile Number', field: 'mobileNumber' },
+  { title: 'ID Number', field: 'idNumber' },
+  { title: 'Contact Person', field: 'contactPerson' },
+  { title: 'Contact Person Mobile', field: 'contactPersonNumber' },
   {
-    title: 'Birth Place',
-    field: 'birthCity',
-    lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
+    title: 'Gender',
+    field: 'gender',
+    lookup: { 34: 'Male', 63: 'Female' },
   }
 ]
 

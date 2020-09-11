@@ -6,11 +6,12 @@ const Footer = () =>
     <AppBar position="static"
             style={{
                 bottom:0,
-                position:'absolute',
+                position:'fixed',
                 width:'100%',
                 display:'flex',
                 justifyContent:'center',
-                flexDirection:'row'
+                flexDirection:'row',
+                marginTop:10
             }}
             >
         <Toolbar>
