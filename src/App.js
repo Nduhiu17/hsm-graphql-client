@@ -9,6 +9,7 @@ const Nursing = React.lazy(() => import('./components/Nursing'))
 const Consultation = React.lazy(() => import('./components/Consultation'))
 const Pharmacy = React.lazy(() => import('./components/Pharmacy'))
 const PatientForm = React.lazy(() => import('./components/Patients/Form'))
+const Login = React.lazy(() => import('./components/Login/index'))
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/consultation" component={Consultation} />
             <Route exact path="/pharmacy" component={Pharmacy} />
             <Route exact path="/create-patient" component={PatientForm} />
+            <Route exact path="/login" component={Login} />
             <Route component={Patients} />
           </Switch>
         </Suspense>
