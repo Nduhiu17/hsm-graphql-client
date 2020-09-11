@@ -73,7 +73,7 @@ function Layout(props) {
             <Divider />
             <List>
                 {mainRoutes.map((route) => (
-                    <Link to={route.path} key={route.name}>
+                    <Link to={route.path} key={route.name} style={{textDecoration: 'none', color: 'black'}}>
                         <ListItem button key={route.name}>
                             <Tooltip TransitionComponent={Zoom} title={route.name}>
                                 <ListItemIcon>{route.icon}</ListItemIcon>

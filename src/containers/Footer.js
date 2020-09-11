@@ -11,8 +11,8 @@ const Footer = () =>
                 display:'flex',
                 justifyContent:'center',
                 flexDirection:'row'
-
-            }}>
+            }}
+            >
         <Toolbar>
             &copy; Smart Care System
         </Toolbar>
