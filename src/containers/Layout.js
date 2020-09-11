@@ -150,8 +150,9 @@ function Layout(props) {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                      <Grid>{props.children}</Grid>
-                <Footer/>
+                {/*<Footer/>*/}
             </main>
+          <Footer/>
         </div>
     );
 }

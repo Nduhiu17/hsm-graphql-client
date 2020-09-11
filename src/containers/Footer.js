@@ -7,7 +7,7 @@ const Footer = () =>
             style={{
                 bottom:0,
                 position:'absolute',
-                width:'80%',
+                width:'100%',
                 display:'flex',
                 justifyContent:'center',
                 flexDirection:'row'
