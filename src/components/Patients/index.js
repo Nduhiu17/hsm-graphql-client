@@ -13,33 +13,40 @@ const styles = theme => ({
 })
 
 export default withStyles(styles)(
- ({classes}) =>
-<Layout>
-  <Grid
-    style={{
-      display: 'flex',
-      justifyContent:'space-between'
-    }}
-  >
-    <Button
-      variant="contained"
-      color="info"
-      className={classes.button}
-      disableElevation
-      component="div"
-    >
-      Registered Patients
-    </Button>
-    <Button
-      variant="contained"
-      color="primary"
-      className={classes.button}
-      startIcon={<AddIcon />}
-    >
-      Add Patient
-    </Button>
-  </Grid>
-  {/*<Toolbar></Toolbar>*/}
- <AppTable/>
-</Layout>
+ ({classes,history}) =>
+ {
+   const goToForm = () => {
+     history.push('create-patient')
+ }
+   return (
+     <Layout>
+       <Grid
+         style={{
+           display: 'flex',
+           justifyContent:'space-between'
+         }}
+       >
+         <Button
+           variant="contained"
+           color="info"
+           className={classes.button}
+           component="div"
+
+         >
+           Registered Patients
+         </Button>
+         <Button
+           variant="contained"
+           color="primary"
+           className={classes.button}
+           startIcon={<AddIcon />}
+           onClick={() => goToForm()}
+         >
+           Add Patient
+         </Button>
+       </Grid>
+       <AppTable/>
+     </Layout>
+   )
+ }
 )

@@ -100,7 +100,14 @@ function Layout(props) {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar position="fixed" className={classes.appBar}>
+            <AppBar
+              position="fixed"
+              className={classes.appBar}
+              style={{
+                display:'flex',
+                flexDirection:'row',
+                justifyContent:'space-between'
+              }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -115,6 +122,20 @@ function Layout(props) {
                         Smart Care System
                     </Typography>
                 </Toolbar>
+              <Toolbar>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  className={classes.menuButton}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography noWrap>
+                 Logout
+                </Typography>
+              </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -150,7 +171,6 @@ function Layout(props) {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                      <Grid>{props.children}</Grid>
-                {/*<Footer/>*/}
             </main>
           <Footer/>
         </div>
