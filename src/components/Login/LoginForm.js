@@ -43,11 +43,12 @@ export default class extends Component{
     return(
       <Grid
       style={{
-        height: '96vh',
+        height: '100vh',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}
+      className="login-wrapper"
       >
 
         <form>
@@ -112,8 +113,9 @@ export default class extends Component{
                   <Grid item md={12} sm={12} xs={12}>
                     <Button
                       variant="contained"
-                      color="primary"
+                      // color="primary"
                       endIcon={<LockOpenIcon/>}
+                      style={{background:"green",color:'#fff'}}
                     >
                       Login
                     </Button>

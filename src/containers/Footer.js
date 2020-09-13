@@ -10,8 +10,7 @@ const Footer = () =>
                 width:'100%',
                 display:'flex',
                 justifyContent:'center',
-                flexDirection:'row',
-                marginTop:10
+                flexDirection:'row'
             }}
             >
         <Toolbar>
