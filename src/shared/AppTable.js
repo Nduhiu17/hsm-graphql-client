@@ -21,7 +21,7 @@ export default function AppTable({columns,data}) {
       actions={[
         {
           icon: () => <VisibilityIcon />,
-          tooltip: 'View Details',
+          tooltip: 'View Patient Details',
           onClick: (event, rowData) => handleClick(rowData.id)
         }
       ]}
