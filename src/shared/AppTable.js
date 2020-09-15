@@ -4,16 +4,14 @@ import AddIcon from '@material-ui/icons/Add';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import history from '../utils/history'
 
-export default function AppTable({columns,data}) {
+export default function AppTable({columns,data,handleClick}) {
 
   const [state, setState] = React.useState({
     columns: columns,
     data: data,
   });
 
-  const handleClick = (id) => {
-      history.push(`/patients/${id}`)
-  }
+
 
   return (
     <MaterialTable
