@@ -146,7 +146,7 @@ export default withStyles(styles)(
                 }}
             >
                 <Grid item md={12} sm={12} xs={12}>
-                    <Paper className={classes.Paper}>
+                    <Paper className={classes.Paper} elevation={2}>
                         <Grid container>
                             <Grid item md={12} sm={12} xs={12}>
                                 <Grid container>
@@ -214,7 +214,7 @@ export default withStyles(styles)(
                     </Paper>
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
-                    <Paper className={classes.Paper}>
+                    <Paper className={classes.Paper} elevation={2}>
                         <Grid container>
                             <Grid item md={12} sm={12} xs={12}>
                                 <Grid container>
