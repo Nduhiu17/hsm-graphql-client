@@ -1,9 +1,10 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import {Divider, Grid, Paper, Toolbar, Typography} from "@material-ui/core";
+import {Button, Divider, Grid, Paper, Toolbar, Typography} from "@material-ui/core";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Icon from "@material-ui/core/Icon";
 
 
 const Layout = React.lazy(() => import('../../containers/Layout'))
@@ -113,17 +114,15 @@ export default withStyles(styles)(
                         }}
                     >
                         <Grid item>
-                            <FormControlLabel
-                                control={
-                                    <Switch
-                                        checked={state.checkedB}
-                                        onChange={handleChange}
-                                        name="checkedB"
-                                        color="secondary"
-                                    />
-                                }
-                                label="Send to Nursing"
-                            />
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                className={classes.button}
+                                endIcon={<Icon>send</Icon>}
+                                disableElevation
+                            >
+                                Send to Nurse
+                            </Button>
                         </Grid>
                     </Grid>
                 </Paper>
