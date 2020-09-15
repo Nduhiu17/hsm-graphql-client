@@ -14,7 +14,7 @@ export default withStyles(styles)(
   () =>{
     return (
       <Layout>
-        <AppTable columns={patientColumns} data={patientData}/>
+        <div>Pharmacy</div>
       </Layout>
     )
   }

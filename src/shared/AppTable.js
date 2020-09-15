@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react';
 import MaterialTable from 'material-table';
+import AddIcon from '@material-ui/icons/Add';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import history from '../utils/history'
 
 export default function AppTable({columns,data}) {
 
@@ -8,9 +11,24 @@ export default function AppTable({columns,data}) {
     data: data,
   });
 
+  const handleClick = (id) => {
+      history.push(`/patients/${id}`)
+  }
+
   return (
     <MaterialTable
       title="Patients"
+      actions={[
+        {
+          icon: () => <VisibilityIcon />,
+          tooltip: 'View Details',
+          onClick: (event, rowData) => handleClick(rowData.id)
+        }
+      ]}
+      options={{
+        actionsColumnIndex: -1
+      }}
+      filtering
       columns={state.columns}
       data={state.data}
       editable={{
